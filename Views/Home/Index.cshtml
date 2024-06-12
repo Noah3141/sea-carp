@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model sea_carp.Models.ToDo[]
+
+<div class="text-center">
+    <h1 class="display-4">Todos</h1>
+
+    <div style="border: 1px solid silver">
+        @foreach (ToDo item in Model) {
+            <div style="border-bottom: 1px solid blue">
+                <div>@item.Title</div>
+                <div>@item.Description</div>
+                <div>@(item.IsComplete ? "Complete" : "Incomplete")</div>
+            </div>
+        }
+    </div>
+</div>
